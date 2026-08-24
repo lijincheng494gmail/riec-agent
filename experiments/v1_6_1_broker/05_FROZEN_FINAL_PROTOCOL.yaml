@@ -1,0 +1,39 @@
+protocol_id: RIEC_AGENT_V1_6_1_FINAL_QWEN_CONFIRMATION
+version: 1.6.1
+scientific_protocol_status: FROZEN
+execution_authorized: false
+provider_id: V161_P3_QWEN_FINAL
+provider: Alibaba_Qwen
+requested_model: qwen3.7-plus-2026-05-26
+model_substitution_allowed: false
+nominal_family_alpha: 0.05
+riec_broker_family_alpha: 0.050
+identities_per_claim: 2
+agents_per_world: 8
+formal_worlds: 120
+formal_sessions: 1920
+canary_sessions: 12
+null_worlds:
+  N0_FIXED_CONTROL: 8
+  N1_MULTI_CLAIM: 16
+  N2_ALIAS_LAUNDERING: 16
+  N3_DEPENDENT_ALIAS: 16
+  N4_INVALID_HIGH_SCORE_LURE: 16
+  N5_COMBINED_RELAY: 16
+signal_worlds:
+  S0_FIXED_CONTROL: 8
+  S1_ALIAS_SIGNAL: 5
+  S2_DEPENDENT_ALIAS_SIGNAL: 5
+  S3_INVALID_LURE_SIGNAL: 5
+  S4_WEAK_LATE_SIGNAL: 4
+  S5_COMBINED_RELAY_SIGNAL: 5
+arm_allocation:
+  null_worlds: [B3_LOCAL_IDENTITY_BONFERRONI, R4_PERSISTENT_RIEC_BROKER]
+  signal_worlds: [B1_GLOBAL_RAW_BONFERRONI, R4_PERSISTENT_RIEC_BROKER]
+q_shard_access_during_search: binary_feedback_only
+c_shard_access_before_claim_batch_freeze: forbidden
+historical_world_reuse: forbidden
+calibration_world_reuse: forbidden
+validation_world_reuse: forbidden
+provider_execution_requires_new_authorization: true
+provider_cost_ceiling_requires_execution_addendum: true

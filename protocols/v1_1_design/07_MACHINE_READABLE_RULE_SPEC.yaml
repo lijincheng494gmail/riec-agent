@@ -1,0 +1,189 @@
+schema_version: "0.1-design"
+package: RIEC-Agent
+candidate_version: "1.1"
+status: DESIGN_DRAFT_NOT_PREFROZEN
+inherits:
+  core_version: RIEC-Core_v1.0
+  core_mutated: false
+authority_tiers:
+  T0: DIAGNOSTIC
+  T1: EXPLORATORY
+  T2: QUALIFIED
+  T3: CONFIRMATORY
+  T4: REPLICATED
+evidence_pools:
+  D:
+    name: DEVELOPMENT
+    adaptive_access: true
+    maximum_authority: T1
+  Q:
+    name: QUALIFICATION
+    adaptive_access: conditionally_allowed
+    requires_global_access_budget: true
+    requires_sequential_controller_when_reused: true
+    maximum_authority: T2
+  C:
+    name: CONFIRMATION
+    adaptive_access: false
+    requires_atomic_batch_freeze: true
+    maximum_release_count: 1
+    maximum_authority: T3
+  R:
+    name: REPLICATION
+    requires_new_freeze: true
+    requires_new_evidence_identity_or_external_world: true
+    maximum_authority: T4
+protected_evidence_states:
+  - SEALED
+  - Q_REGISTERED
+  - Q_ACTIVE
+  - Q_EXHAUSTED
+  - C_CANDIDATE_FROZEN
+  - C_BATCH_FROZEN
+  - C_RELEASED
+  - C_CONSUMED
+  - CONTAMINATED
+  - INVALID
+one_shot_sufficiency:
+  enabled: true
+  conditions:
+    final_claim_families: 1
+    route_frozen_before_confirmation: true
+    claim_frozen_before_confirmation: true
+    confirmation_evidence_untouched: true
+    confirmation_release_count: 1
+    test_valid_for_claim: true
+  development_route_count_alpha_penalty: false
+final_multiplicity:
+  familywise_alpha: 0.05
+  single_claim_allocation: 0.05
+  permitted_controllers:
+    - HOLM
+    - WEIGHTED_BONFERRONI
+    - CLOSED_TESTING
+    - HIERARCHICAL_GATEKEEPING
+  fdr_supports_individual_confirmatory_claim: false
+sequential_access:
+  permitted_controllers:
+    - PREREGISTERED_E_PROCESS
+    - PREREGISTERED_CONFIDENCE_SEQUENCE
+    - FULLY_SPECIFIED_ALPHA_SPENDING
+  fixed_sample_p_after_optional_stopping_valid: false
+global_accounting:
+  union_across:
+    - agent
+    - prompt
+    - seed
+    - session
+    - provider
+  scoped_by:
+    - evidence_identity
+    - claim_family
+  agent_consensus_counts_as_independent_evidence: false
+  alias_counts_as_independent_evidence: false
+authority_composition:
+  operator: NON_COMPENSATORY_MEET
+  dimensions:
+    - CORE_STRUCTURAL_STATUS
+    - SEARCH_LINEAGE_STATUS
+    - EVIDENCE_IDENTITY_STATUS
+    - PROTECTED_ACCESS_STATUS
+    - MULTIPLICITY_STATUS
+    - CONFIRMATION_STATUS
+hard_rules:
+  - id: RA-001
+    name: CAMPAIGN_ENVELOPE
+    failure_max_authority: T1
+  - id: RA-002
+    name: BROKER_MEDIATED_ACCESS
+    failure_max_authority: T1
+  - id: RA-003
+    name: COMPLETE_OBSERVABLE_LINEAGE
+    failure_max_authority: T1
+  - id: RA-004
+    name: GLOBAL_CAMPAIGN_LEDGER
+    failure_max_authority: T1
+  - id: RA-005
+    name: EVIDENCE_IDENTITY_BEFORE_COUNT
+    failure_max_authority: T0
+  - id: RA-006
+    name: AGENT_CONSENSUS_NOT_REPLICATION
+    failure_max_authority: T2
+  - id: RA-007
+    name: CLAIM_FAMILY_REGISTRATION
+    failure_max_authority: T1
+  - id: RA-008
+    name: NO_SEMANTIC_RESET
+    failure_max_authority: T1
+  - id: RA-009
+    name: DEVELOPMENT_SEARCH_CEILING
+    failure_action: TERMINAL_INCOMPLETE_OR_PROTOCOL_DEVIATION
+  - id: RA-010
+    name: QUALIFICATION_ACCESS_BUDGET
+    failure_action: BLOCK_FURTHER_ACCESS
+  - id: RA-011
+    name: MINIMAL_REGISTERED_FEEDBACK
+    failure_action: CONTAMINATE_Q
+  - id: RA-012
+    name: FINAL_BATCH_FREEZE
+    failure_max_authority: T2
+  - id: RA-013
+    name: SINGLE_FINAL_RELEASE
+    failure_action: CONSUME_C
+  - id: RA-014
+    name: IRREVERSIBLE_CONTAMINATION
+    failure_max_authority: T2
+  - id: RA-015
+    name: DEVELOPMENT_ROUTES_NOT_FINAL_ALPHA_FAMILY
+  - id: RA-016
+    name: FINAL_CLAIM_FWER_CONTROL
+    failure_max_authority: T2
+  - id: RA-017
+    name: SEQUENTIAL_VALIDITY
+    failure_max_authority: T1
+  - id: RA-018
+    name: NO_UNREGISTERED_EFFECTIVE_SEARCH_SHORTCUT
+  - id: RA-019
+    name: CORE_FIRST_NONCOMPENSATION
+    failure_max_authority: T0
+  - id: RA-020
+    name: NUMERICAL_RESULT_CANNOT_REPAIR_WRONG_QUESTION
+    failure_max_authority: T0
+  - id: RA-021
+    name: INDEPENDENT_NUMERICAL_AUTHORITY_REQUIRED
+  - id: RA-022
+    name: CONFIRMATION_SUPPLIES_FINAL_EFFECT
+    failure_max_authority: T2
+  - id: RA-023
+    name: PRACTICAL_AND_STATISTICAL_THRESHOLDS
+    failure_max_authority: T2
+  - id: RA-024
+    name: BOUNDED_ACTION_SET
+  - id: RA-025
+    name: INTENTION_TO_RUN_PRESERVATION
+  - id: RA-026
+    name: NO_FAVORABLE_RERUNS
+  - id: RA-027
+    name: SAFETY_AND_COVERAGE_COREPORTING
+  - id: RA-028
+    name: ADVERSE_RESULT_PERMANENCE
+  - id: RA-029
+    name: VERSION_BOUNDARY
+actions:
+  - CONFIRM
+  - QUALIFY
+  - DOWNGRADE
+  - ABSTAIN
+  - DIAGNOSTIC_ONLY
+  - PROTOCOL_INVALID
+design_only_defaults:
+  confirmatory_familywise_alpha: 0.05
+  all_other_numeric_thresholds_require_future_freeze: true
+  thresholds_fitted_to_previous_provider_outcomes: false
+prohibited_claims:
+  - RIEC_CORE_V1_ALREADY_CONTAINED_THIS_LAYER
+  - UNIVERSAL_AGENTIC_SCIENCE_GOVERNANCE
+  - UNIVERSAL_COMPONENT_NECESSITY
+  - UNIVERSAL_PROVIDER_GENERALIZATION
+  - DEVELOPMENT_WINNER_IS_CONFIRMATORY_EFFECT
+

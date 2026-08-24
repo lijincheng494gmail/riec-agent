@@ -1,0 +1,10 @@
+{
+  "estimated_cost_cny_conservative": 23.687875719000004,
+  "formal_usage": {
+    "input_tokens": 1074001,
+    "output_tokens": 39031,
+    "total_tokens": 1113032
+  },
+  "hard_ceiling_cny": 120.0,
+  "provider_billing_authoritative": true
+}

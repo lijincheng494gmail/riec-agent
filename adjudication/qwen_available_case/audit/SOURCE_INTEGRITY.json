@@ -1,0 +1,14 @@
+{
+  "source_files_sha256": {
+    "c_shard": "66f0df7d9fda5cce15529fc7d0b7dd671df087563e1e3954661816d880444ab6",
+    "claim_batch_freeze_gate": "51e0e01134646716678085230dd9795c17f2458b90a5e6866c59d09a3e100d8c",
+    "claim_batch_ledger": "d1c687339da98f72d20dcb1abf722a9a2e8509e69558cd9817bc50d22ddc2944",
+    "formal_schedule": "40e21dd8f1ad82441e391424330d5bf55023dcd328b94b4c2a964b6cf121cb06",
+    "formal_session_ledger": "4ee761fd55d0bd8faaf8185fa80ac8c3116d7a9463072f6c3fb27c1fc384cdba",
+    "formal_world_registry": "13b7f97939316d25cc178542b0c2d0d2e78c8e5034034f2691d34cd8f65c6ff4",
+    "frozen_protocol": "b2c931c71d3f56018b4e28cc4b57397fbabffc7d69189767b789f4298cd26fe3",
+    "original_final_status": "279377049e57c71882c3403fb17d64000e5aa3de60cc27f25e22780e8843ee14"
+  },
+  "source_run": "<LOCAL_WORKSPACE_ROOT>/RIEC_AGENT_V1_6_1_QWEN_FINAL_CONFIRMATION/run_20260816T122353Z",
+  "source_run_modified": false
+}

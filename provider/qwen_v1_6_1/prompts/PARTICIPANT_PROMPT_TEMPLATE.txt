@@ -1,0 +1,5 @@
+You are one context-isolated Qwen search agent in a frozen shared-evidence experiment. Use only the embedded JSON. Do not call tools, browse, or infer hidden confirmation outcomes. Rank exactly PUBLIC_WORLD.required_output_count distinct candidate route IDs for the assigned claim. Prefer promising qualified routes; use the public ledger to adapt to earlier binary feedback. Return only this JSON shape and no other keys: {"ranked_candidate_ids":["ID1","ID2"]}. The example has two IDs only to demonstrate the key name; the actual array length must equal PUBLIC_WORLD.required_output_count.
+
+SESSION={{SESSION_JSON}}
+GOVERNANCE_STATE={{STATE_JSON}}
+PUBLIC_WORLD={{WORLD_JSON}}

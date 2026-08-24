@@ -1,0 +1,419 @@
+{
+  "arms": {
+    "B1_GLOBAL_RAW_BONFERRONI": {
+      "alias_signal_coverage": 0.0,
+      "false_block_rate": 0.8709444444444444,
+      "maximum_alpha_spent": 0.049999999999999996,
+      "mean_raw_tests": 7.0,
+      "null_false_count": 430,
+      "null_fwer": 0.02388888888888889,
+      "null_worlds": 18000,
+      "signal_coverage": 0.12905555555555556,
+      "signal_covered_count": 2323,
+      "signal_worlds": 18000
+    },
+    "B2_ONLINE_GLOBAL_SPENDING": {
+      "alias_signal_coverage": 0.0,
+      "false_block_rate": 0.8692777777777778,
+      "maximum_alpha_spent": 0.05,
+      "mean_raw_tests": 7.0,
+      "null_false_count": 557,
+      "null_fwer": 0.030944444444444445,
+      "null_worlds": 18000,
+      "signal_coverage": 0.1307222222222222,
+      "signal_covered_count": 2353,
+      "signal_worlds": 18000
+    },
+    "B3_LOCAL_IDENTITY_BONFERRONI": {
+      "alias_signal_coverage": 0.7832666666666667,
+      "false_block_rate": 0.20983333333333334,
+      "maximum_alpha_spent": 0.19999999999999998,
+      "mean_raw_tests": 7.0,
+      "null_false_count": 2361,
+      "null_fwer": 0.13116666666666665,
+      "null_worlds": 18000,
+      "signal_coverage": 0.7901666666666667,
+      "signal_covered_count": 14223,
+      "signal_worlds": 18000
+    },
+    "R4_PERSISTENT_RIEC_BROKER": {
+      "alias_signal_coverage": 0.7126666666666667,
+      "false_block_rate": 0.26866666666666666,
+      "maximum_alpha_spent": 0.05,
+      "mean_raw_tests": 7.0,
+      "null_false_count": 757,
+      "null_fwer": 0.042055555555555554,
+      "null_worlds": 18000,
+      "signal_coverage": 0.7313333333333333,
+      "signal_covered_count": 13164,
+      "signal_worlds": 18000
+    }
+  },
+  "broker_alpha": 0.05,
+  "by_regime": {
+    "N0_FIXED_CONTROL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.011666666666666667,
+        "maximum_alpha_spent": 0.0125,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.022,
+        "maximum_alpha_spent": 0.02,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.051666666666666666,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.051666666666666666,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      }
+    },
+    "N1_MULTI_CLAIM": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.050666666666666665,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.051,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.19066666666666668,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.050666666666666665,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "N2_ALIAS_LAUNDERING": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.024333333333333332,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.03233333333333333,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.19033333333333333,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.049666666666666665,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "N3_DEPENDENT_ALIAS": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.015666666666666666,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.025666666666666667,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.10533333333333333,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.029666666666666668,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "N4_INVALID_HIGH_SCORE_LURE": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.026333333333333334,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.03333333333333333,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.152,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.043666666666666666,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "N5_COMBINED_RELAY": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.014666666666666666,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.021333333333333333,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.097,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.0,
+        "false_block_rate": 0.0,
+        "false_rate": 0.027,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "S0_FIXED_CONTROL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.7743333333333333,
+        "false_block_rate": 0.22566666666666665,
+        "false_rate": 0.005,
+        "maximum_alpha_spent": 0.0125,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.7843333333333333,
+        "false_block_rate": 0.21566666666666667,
+        "false_rate": 0.009,
+        "maximum_alpha_spent": 0.02,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.8246666666666667,
+        "false_block_rate": 0.17533333333333334,
+        "false_rate": 0.025333333333333333,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.8246666666666667,
+        "false_block_rate": 0.17533333333333334,
+        "false_rate": 0.025333333333333333,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      }
+    },
+    "S1_ALIAS_SIGNAL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.025,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.034,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.832,
+        "false_block_rate": 0.168,
+        "false_rate": 0.17133333333333334,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.7726666666666666,
+        "false_block_rate": 0.22733333333333333,
+        "false_rate": 0.043333333333333335,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "S2_DEPENDENT_ALIAS_SIGNAL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.021,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.027333333333333334,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.8196666666666667,
+        "false_block_rate": 0.18033333333333335,
+        "false_rate": 0.105,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.7683333333333333,
+        "false_block_rate": 0.23166666666666666,
+        "false_rate": 0.029666666666666668,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "S3_INVALID_LURE_SIGNAL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.024666666666666667,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.032,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.802,
+        "false_block_rate": 0.198,
+        "false_rate": 0.13833333333333334,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.734,
+        "false_block_rate": 0.266,
+        "false_rate": 0.03933333333333333,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "S4_WEAK_LATE_SIGNAL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.025333333333333333,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.029666666666666668,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.6593333333333333,
+        "false_block_rate": 0.3406666666666667,
+        "false_rate": 0.126,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.5556666666666666,
+        "false_block_rate": 0.44433333333333336,
+        "false_rate": 0.04066666666666666,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    },
+    "S5_COMBINED_RELAY_SIGNAL": {
+      "B1_GLOBAL_RAW_BONFERRONI": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.022333333333333334,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      },
+      "B2_ONLINE_GLOBAL_SPENDING": {
+        "coverage": 0.0,
+        "false_block_rate": 1.0,
+        "false_rate": 0.027666666666666666,
+        "maximum_alpha_spent": 0.05,
+        "n": 3000
+      },
+      "B3_LOCAL_IDENTITY_BONFERRONI": {
+        "coverage": 0.8033333333333333,
+        "false_block_rate": 0.19666666666666666,
+        "false_rate": 0.09,
+        "maximum_alpha_spent": 0.19999999999999998,
+        "n": 3000
+      },
+      "R4_PERSISTENT_RIEC_BROKER": {
+        "coverage": 0.7326666666666667,
+        "false_block_rate": 0.2673333333333333,
+        "false_rate": 0.029,
+        "maximum_alpha_spent": 0.049999999999999996,
+        "n": 3000
+      }
+    }
+  },
+  "seed": 2026081601611,
+  "seed_sha256": "86717b4495c65d791bca8a2759421b342333a4f60fed5cd919f3e96ed513ae37",
+  "worlds": 36000,
+  "worlds_per_regime": 3000
+}

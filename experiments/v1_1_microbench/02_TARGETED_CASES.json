@@ -1,0 +1,275 @@
+[
+  {
+    "case_id": "T00_BASELINE_VALID_CONFIRMATION",
+    "risk_regime": "R0",
+    "kind": "CONTROL",
+    "description": "One frozen claim, fully qualified structure, one untouched confirmation release.",
+    "overrides": {},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T01_R0_HIGH_DEVELOPMENT_SEARCH",
+    "risk_regime": "R0",
+    "kind": "CONTROL",
+    "description": "One frozen claim after 1000 logged development routes; untouched C remains one-shot.",
+    "overrides": {"development_routes": 1000, "development_ceiling": 1000},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T02_R1_OPTIONAL_STOPPING_FIXED_P",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "Twenty adaptive Q queries use ordinary fixed-sample p-values.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "q_queries": 20, "q_budget": 20, "q_controller": "FIXED_P_OPTIONAL", "q_p_values": [0.0001]},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-017"]}
+  },
+  {
+    "case_id": "T03_R1_VALID_GLOBAL_QUERY_CONTROL",
+    "risk_regime": "R1",
+    "kind": "CONTROL",
+    "description": "Twenty Q queries use a frozen global Bonferroni query controller.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "q_queries": 20, "q_budget": 20, "q_controller": "GLOBAL_BONFERRONI", "q_p_values": [0.001]},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T04_R1_QUERY_BUDGET_EXCEEDED",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "The global Q access budget is exceeded.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "q_queries": 21, "q_budget": 20, "q_controller": "GLOBAL_BONFERRONI", "q_p_values": [0.0001]},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-010"]}
+  },
+  {
+    "case_id": "T05_R1_UNREGISTERED_FEEDBACK",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "Q returns an unregistered exact feedback payload.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "q_queries": 5, "q_budget": 5, "q_controller": "GLOBAL_BONFERRONI", "q_p_values": [0.001], "q_feedback_registered": false},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-011"]}
+  },
+  {
+    "case_id": "T06_R2_GLOBAL_MULTIAGENT_LEDGER",
+    "risk_regime": "R2",
+    "kind": "CONTROL",
+    "description": "Four agents share one Q identity and all queries are unioned globally.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "agent_count": 4, "global_ledger": true, "q_queries": 20, "q_budget": 20, "q_controller": "GLOBAL_BONFERRONI", "q_p_values": [0.001]},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T07_R2_PER_AGENT_LEDGER_RESET",
+    "risk_regime": "R2",
+    "kind": "RISK",
+    "description": "Four agents incorrectly receive independent query-budget resets on the same evidence identity.",
+    "overrides": {"requested_tier": 2, "evidence_mode": "Q", "agent_count": 4, "global_ledger": false, "q_queries": 20, "q_budget": 20, "q_controller": "GLOBAL_BONFERRONI", "q_p_values": [0.001]},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-004"]}
+  },
+  {
+    "case_id": "T08_R2_AGENT_CONSENSUS_AS_REPLICATION",
+    "risk_regime": "R2",
+    "kind": "RISK",
+    "description": "Four agents analyzing one evidence identity are claimed as four replications.",
+    "overrides": {"requested_tier": 4, "evidence_mode": "R", "agent_count": 4, "claimed_independent_replications": 4, "unique_evidence_identities": 1},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-006"]}
+  },
+  {
+    "case_id": "T09_R3_HOLM_CONTROLLED_FINAL_FAMILY",
+    "risk_regime": "R3",
+    "kind": "CONTROL",
+    "description": "Twenty final claims are frozen and evaluated using Holm FWER control.",
+    "overrides": {"final_claim_count": 20, "final_controller": "HOLM", "confirmation_p_values": [0.001, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T10_R3_UNADJUSTED_FINAL_FAMILY",
+    "risk_regime": "R3",
+    "kind": "RISK",
+    "description": "Twenty final claims are tested at unadjusted alpha.",
+    "overrides": {"final_claim_count": 20, "final_controller": "UNADJUSTED", "confirmation_p_values": [0.001, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-016"]}
+  },
+  {
+    "case_id": "T11_R3_POSTFEEDBACK_SEMANTIC_RESET",
+    "risk_regime": "R3",
+    "kind": "RISK",
+    "description": "A failed primary claim is renamed as a discovered subgroup claim after feedback.",
+    "overrides": {"semantic_reset": true},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-008"]}
+  },
+  {
+    "case_id": "T12_R4_ALIASED_EVIDENCE",
+    "risk_regime": "R4",
+    "kind": "RISK",
+    "description": "Duplicated reports are miscounted as independent evidence.",
+    "overrides": {"core_g2_identity_valid": false},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G2"], "triggered_rules": ["RA-005", "RA-019"]}
+  },
+  {
+    "case_id": "T13_R4_DEDUPLICATED_EVIDENCE_CONTROL",
+    "risk_regime": "R4",
+    "kind": "CONTROL",
+    "description": "Overlapping reports are correctly deduplicated before final confirmation.",
+    "overrides": {"core_g2_identity_valid": true},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T14_R5_ESTIMAND_MISMATCH_WITH_SIGNIFICANCE",
+    "risk_regime": "R5",
+    "kind": "RISK",
+    "description": "A highly significant result answers a different estimand.",
+    "overrides": {"core_g1_estimand_aligned": false, "confirmation_p_values": [0.000001]},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G1"], "triggered_rules": ["RA-019", "RA-020"]}
+  },
+  {
+    "case_id": "T15_R5_ALIGNED_ESTIMAND_CONTROL",
+    "risk_regime": "R5",
+    "kind": "CONTROL",
+    "description": "The same numerical result targets the registered estimand.",
+    "overrides": {"core_g1_estimand_aligned": true, "confirmation_p_values": [0.000001]},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T16_R6_DEPLOYMENT_MISMATCH",
+    "risk_regime": "R6",
+    "kind": "RISK",
+    "description": "Random-split evidence is used for a future-subject deployment claim.",
+    "overrides": {"core_g3_deployment_aligned": false, "confirmation_p_values": [0.000001]},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G3"], "triggered_rules": ["RA-019", "RA-020"]}
+  },
+  {
+    "case_id": "T17_R6_SUPPORT_FAILURE",
+    "risk_regime": "R6",
+    "kind": "RISK",
+    "description": "The target regime lies outside effective empirical support.",
+    "overrides": {"core_g4_support_sufficient": false, "confirmation_p_values": [0.000001]},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G4"], "triggered_rules": ["RA-019", "RA-020"]}
+  },
+  {
+    "case_id": "T18_R6_DEPLOYMENT_SUPPORT_CONTROL",
+    "risk_regime": "R6",
+    "kind": "CONTROL",
+    "description": "Deployment and target support are both registered and represented.",
+    "overrides": {"core_g3_deployment_aligned": true, "core_g4_support_sufficient": true},
+    "expected": {"authority": "T3_CONFIRMATORY", "action": "CONFIRM", "core_failures": [], "triggered_rules": []}
+  },
+  {
+    "case_id": "T19_R7_COMPOUND_RISK",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "Estimand and identity failures combine with per-agent reset, optional stopping, semantic reset, unadjusted claims and contaminated C.",
+    "overrides": {"core_g1_estimand_aligned": false, "core_g2_identity_valid": false, "global_ledger": false, "semantic_reset": true, "q_queries": 20, "q_controller": "FIXED_P_OPTIONAL", "final_claim_count": 20, "final_controller": "UNADJUSTED", "c_contaminated": true, "confirmation_p_values": [0.000001, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G1", "G2"], "triggered_rules": ["RA-004", "RA-005", "RA-008", "RA-014", "RA-016", "RA-017", "RA-019", "RA-020"]}
+  },
+  {
+    "case_id": "T20_REPEATED_CONFIRMATION_RELEASE",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "The same C identity is queried twice after information release.",
+    "overrides": {"c_release_count": 2},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-013"]}
+  },
+  {
+    "case_id": "T21_CONTAMINATED_C_WITH_VALID_Q",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "C is contaminated, but a separate valid Q result remains.",
+    "overrides": {"c_contaminated": true},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-014"]}
+  },
+  {
+    "case_id": "T22_CONFIRMATION_USED_FOR_SELECTION",
+    "risk_regime": "R1",
+    "kind": "RISK",
+    "description": "C feedback is used to choose the winning route and estimate it.",
+    "overrides": {"c_used_for_selection": true},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-022"]}
+  },
+  {
+    "case_id": "T23_PRACTICAL_THRESHOLD_FAILURE",
+    "risk_regime": "R0",
+    "kind": "RISK",
+    "description": "The interval excludes zero but not the frozen minimum effect.",
+    "overrides": {"confirmation_ci_low": 0.02, "minimum_effect": 0.08},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-023"]}
+  },
+  {
+    "case_id": "T24_TERMINAL_MISSINGNESS_INVALID",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "Terminal missingness violates the frozen confirmatory completion rule.",
+    "overrides": {"missingness_valid": false},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-025"]}
+  },
+  {
+    "case_id": "T25_UNCERTAINTY_PROVENANCE_FAILURE",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "Formal uncertainty provenance is invalid despite a favorable point estimate.",
+    "overrides": {"core_g5_uncertainty_valid": false},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G5"], "triggered_rules": ["RA-019"]}
+  },
+  {
+    "case_id": "T26_DOMAIN_ADMISSIBILITY_FAILURE",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "A domain constraint forbids the otherwise favorable claim.",
+    "overrides": {"core_g6_domain_admissible": false},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G6"], "triggered_rules": ["RA-019"]}
+  },
+  {
+    "case_id": "T27_PROTOCOL_REGISTRATION_FAILURE",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "The protocol/version is not registered.",
+    "overrides": {"core_g0_registered": false},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "DIAGNOSTIC_ONLY", "core_failures": ["G0"], "triggered_rules": ["RA-001", "RA-019"]}
+  },
+  {
+    "case_id": "T28_UNBROKERED_EMPIRICAL_ACCESS",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "The agent receives empirical outputs outside the registered broker.",
+    "overrides": {"broker_mediated": false},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-002"]}
+  },
+  {
+    "case_id": "T29_INCOMPLETE_SEARCH_LINEAGE",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "Executed searches cannot be reconstructed.",
+    "overrides": {"lineage_complete": false},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-003"]}
+  },
+  {
+    "case_id": "T30_DEVELOPMENT_EFFECT_PROMOTED",
+    "risk_regime": "R0",
+    "kind": "RISK",
+    "description": "The selected development winner is reported as the final effect estimate.",
+    "overrides": {"final_effect_source": "D"},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-022"]}
+  },
+  {
+    "case_id": "T31_POSTFREEZE_VERSION_MUTATION",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "A scientific rule is changed after freeze without a new version.",
+    "overrides": {"version_mutated_postfreeze": true},
+    "expected": {"authority": "T0_DIAGNOSTIC", "action": "PROTOCOL_INVALID", "core_failures": [], "triggered_rules": ["RA-029"]}
+  },
+  {
+    "case_id": "T32_DEVELOPMENT_CEILING_EXCEEDED",
+    "risk_regime": "R7",
+    "kind": "RISK",
+    "description": "The agent exceeds the frozen number of development operations.",
+    "overrides": {"development_routes": 1001, "development_ceiling": 1000},
+    "expected": {"authority": "T1_EXPLORATORY", "action": "DOWNGRADE", "core_failures": [], "triggered_rules": ["RA-009"]}
+  },
+  {
+    "case_id": "T33_FINAL_BATCH_NOT_FROZEN",
+    "risk_regime": "R3",
+    "kind": "RISK",
+    "description": "C is released before the complete claim family is frozen.",
+    "overrides": {"final_batch_frozen": false},
+    "expected": {"authority": "T2_QUALIFIED", "action": "QUALIFY", "core_failures": [], "triggered_rules": ["RA-012"]}
+  }
+]
+

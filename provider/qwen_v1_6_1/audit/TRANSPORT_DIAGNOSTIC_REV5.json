@@ -1,0 +1,70 @@
+{
+  "accepted": false,
+  "attempt_count": 1,
+  "attempts": [
+    {
+      "accepted": false,
+      "attempt_no": 1,
+      "error": null,
+      "http_status": 200,
+      "latency_seconds": 4.209701917134225,
+      "model_ok": true,
+      "output_text": "{\"ranked_candidate_ids\":[\"C0_R0\",\"C0_R1\"]}",
+      "provider_raw_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\"ranked_candidate_ids\":[\"C0_R0\",\"C0_R1\"]}",
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1786884338,
+        "id": "chatcmpl-c2b26f1f-4b59-929b-8f82-fa1bdd63417a",
+        "model": "qwen3.7-plus-2026-05-26",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 16,
+          "prompt_tokens": 412,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "text_tokens": 412
+          },
+          "total_tokens": 428
+        }
+      },
+      "provider_response_id": "chatcmpl-c2b26f1f-4b59-929b-8f82-fa1bdd63417a",
+      "response": {
+        "ranked_candidate_ids": [
+          "C0_R0",
+          "C0_R1"
+        ]
+      },
+      "response_model": "qwen3.7-plus-2026-05-26",
+      "schema_reason": "ranked_not_unique",
+      "schema_valid": false,
+      "transport_ok": true,
+      "usage": {
+        "input_tokens": 412,
+        "output_tokens": 16,
+        "total_tokens": 428
+      },
+      "usage_ok": true
+    }
+  ],
+  "latency_seconds": 4.209701917134225,
+  "response": null,
+  "response_model": "qwen3.7-plus-2026-05-26",
+  "retry_count": 0,
+  "scientific_authority": "NONE_TRANSPORT_ONLY",
+  "session_id": "V161-QWEN-TRANSPORT-DIAGNOSTIC-01",
+  "terminal_disposition": "TERMINAL_BEHAVIORAL_MISSING",
+  "usage": {
+    "input_tokens": 412,
+    "output_tokens": 16,
+    "total_tokens": 428
+  }
+}

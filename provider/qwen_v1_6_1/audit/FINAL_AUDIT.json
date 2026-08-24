@@ -1,0 +1,11 @@
+{
+  "canary_status": "PASS",
+  "core_v1_modified": false,
+  "estimated_cost_cny_conservative": 23.687875719000004,
+  "formal_sessions": 1920,
+  "hard_ceiling_cny": 120.0,
+  "model": "qwen3.7-plus-2026-05-26",
+  "qwen_confirmation_status": "FAIL_CLOSED_BEFORE_C",
+  "scientific_status": "FAIL_CLOSED_BEFORE_C",
+  "technical_status": "FAIL"
+}

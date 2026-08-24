@@ -1,0 +1,9 @@
+test_alpha_invariant_shape (test_qwen_protocol.ProtocolTests.test_alpha_invariant_shape) ... ok
+test_holm (test_qwen_protocol.ProtocolTests.test_holm) ... ok
+test_response_validation (test_qwen_protocol.ProtocolTests.test_response_validation) ... ok
+test_sign_test (test_qwen_protocol.ProtocolTests.test_sign_test) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

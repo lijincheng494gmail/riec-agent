@@ -1,0 +1,117 @@
+{
+  "calibration_worlds_per_regime": 3000,
+  "calibration_worlds_total_per_candidate": 36000,
+  "candidates": [
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.05,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.7126666666666667,
+      "r4_null_false_count": 757,
+      "r4_null_fwer": 0.042055555555555554,
+      "r4_null_fwer_cp95_upper": 0.04459949584375794,
+      "r4_null_worlds": 18000,
+      "result_sha256": "31f2c48b097d5fa09db9e428f6d81ae57c1171b7bb40f919daf1a6d0a33f973c"
+    },
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.045,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.7082666666666667,
+      "r4_null_false_count": 682,
+      "r4_null_fwer": 0.03788888888888889,
+      "r4_null_fwer_cp95_upper": 0.04031339720801008,
+      "r4_null_worlds": 18000,
+      "result_sha256": "f910eacfc113fa490c3847005253aebd69a8acd5f6a9f28d0661a45eaee13dc7"
+    },
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.04,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.7027333333333333,
+      "r4_null_false_count": 599,
+      "r4_null_fwer": 0.03327777777777778,
+      "r4_null_fwer_cp95_upper": 0.035561130646476924,
+      "r4_null_worlds": 18000,
+      "result_sha256": "d36e5048dafcf5d28289458421b0592d06beff1acf9ae5632bacfa066ac86635"
+    },
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.035,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.6958666666666666,
+      "r4_null_false_count": 518,
+      "r4_null_fwer": 0.028777777777777777,
+      "r4_null_fwer_cp95_upper": 0.030912464077191663,
+      "r4_null_worlds": 18000,
+      "result_sha256": "ff4d7816d703f6dd611f91f546bb5ba43e5925e60fab4bc043d22aecbf8e33c8"
+    },
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.03,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.6891333333333334,
+      "r4_null_false_count": 454,
+      "r4_null_fwer": 0.025222222222222222,
+      "r4_null_fwer_cp95_upper": 0.027230163869236865,
+      "r4_null_worlds": 18000,
+      "result_sha256": "929a5f6b717500f44f7b950eda5f9fd55ec3e1365d50198d2d6f07247d9c8751"
+    },
+    {
+      "b3_alias_signal_coverage": 0.7832666666666667,
+      "b3_null_fwer": 0.13116666666666665,
+      "broker_alpha": 0.025,
+      "checks": {
+        "ALIAS_SIGNAL_COVERAGE_GE_0_65": true,
+        "ALPHA_LEDGER_INVARIANT": true,
+        "CP95_UPPER_LE_0_05": true,
+        "LOCAL_GLOBAL_RISK_GAP_GE_0_08": true
+      },
+      "eligible": true,
+      "r4_alias_signal_coverage": 0.6818,
+      "r4_null_false_count": 398,
+      "r4_null_fwer": 0.022111111111111113,
+      "r4_null_fwer_cp95_upper": 0.02399995394612002,
+      "r4_null_worlds": 18000,
+      "result_sha256": "6cbc12dda9c1ff1dcd91b8346dbe1af437495aba6c312246dc1a59df70ab5d6b"
+    }
+  ],
+  "selected_broker_alpha": 0.05,
+  "selection_rule": "largest candidate satisfying every frozen calibration guardrail",
+  "status": "PASS"
+}

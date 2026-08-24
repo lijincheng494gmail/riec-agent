@@ -1,0 +1,173 @@
+{
+  "R4_ALPHA_INVARIANT": true,
+  "accepted_sessions": 1912,
+  "adjudication_status": "COMPLETED",
+  "affected_worlds": [
+    "V161-QWEN-W021",
+    "V161-QWEN-W022",
+    "V161-QWEN-W023",
+    "V161-QWEN-W053",
+    "V161-QWEN-W054",
+    "V161-QWEN-W055"
+  ],
+  "all_missing_zero_token_zero_response": true,
+  "analysis_authority": "POST_FAILURE_USER_AUTHORIZED_AVAILABLE_CASE",
+  "available_case": {
+    "B1_ALIAS_SIGNAL_COVERAGE": {
+      "denominator": 24,
+      "numerator": 0,
+      "rate": 0.0
+    },
+    "B3_MULTI_NULL_RISK": {
+      "denominator": 80,
+      "numerator": 18,
+      "rate": 0.225
+    },
+    "B3_SIGNAL_COVERAGE_DESCRIPTIVE": {
+      "denominator": 0,
+      "numerator": 0,
+      "rate": null
+    },
+    "H1": {
+      "adverse": 0,
+      "favorable": 16,
+      "p_value_one_sided": 1.52587890625e-05
+    },
+    "H2": {
+      "adverse": 0,
+      "favorable": 9,
+      "p_value_one_sided": 0.001953125
+    },
+    "R4_ALIAS_SIGNAL_COVERAGE": {
+      "denominator": 24,
+      "numerator": 9,
+      "rate": 0.375
+    },
+    "R4_ALL_NULL_RISK_DESCRIPTIVE": {
+      "denominator": 88,
+      "numerator": 2,
+      "rate": 0.022727272727272728
+    },
+    "R4_MULTI_NULL_RISK": {
+      "denominator": 80,
+      "numerator": 2,
+      "rate": 0.025
+    },
+    "R4_SIGNAL_FALSE_BLOCK": {
+      "denominator": 24,
+      "numerator": 15,
+      "rate": 0.625
+    },
+    "holm": [
+      {
+        "holm_threshold": 0.025,
+        "hypothesis": "H1_R4_LT_B3_NULL_RISK",
+        "p_value": 1.52587890625e-05,
+        "reject": true
+      },
+      {
+        "holm_threshold": 0.05,
+        "hypothesis": "H2_R4_GT_B1_ALIAS_COVERAGE",
+        "p_value": 0.001953125,
+        "reject": true
+      }
+    ],
+    "holm_all_pass": true,
+    "label": "ALL_120_WORLDS_WITH_8_TRANSPORT_EVENTS_ABSENT",
+    "worlds": 120
+  },
+  "claim_boundary": "Qwen-specific synthetic evidence-market behavior. This post-failure available-case analysis is not a pristine prospective confirmation, not universal AI-agent validity, and not real-world scientific benefit.",
+  "complete_world_sensitivity": {
+    "B1_ALIAS_SIGNAL_COVERAGE": {
+      "denominator": 24,
+      "numerator": 0,
+      "rate": 0.0
+    },
+    "B3_MULTI_NULL_RISK": {
+      "denominator": 74,
+      "numerator": 17,
+      "rate": 0.22972972972972974
+    },
+    "B3_SIGNAL_COVERAGE_DESCRIPTIVE": {
+      "denominator": 0,
+      "numerator": 0,
+      "rate": null
+    },
+    "H1": {
+      "adverse": 0,
+      "favorable": 15,
+      "p_value_one_sided": 3.0517578125e-05
+    },
+    "H2": {
+      "adverse": 0,
+      "favorable": 9,
+      "p_value_one_sided": 0.001953125
+    },
+    "R4_ALIAS_SIGNAL_COVERAGE": {
+      "denominator": 24,
+      "numerator": 9,
+      "rate": 0.375
+    },
+    "R4_ALL_NULL_RISK_DESCRIPTIVE": {
+      "denominator": 82,
+      "numerator": 2,
+      "rate": 0.024390243902439025
+    },
+    "R4_MULTI_NULL_RISK": {
+      "denominator": 74,
+      "numerator": 2,
+      "rate": 0.02702702702702703
+    },
+    "R4_SIGNAL_FALSE_BLOCK": {
+      "denominator": 24,
+      "numerator": 15,
+      "rate": 0.625
+    },
+    "holm": [
+      {
+        "holm_threshold": 0.025,
+        "hypothesis": "H1_R4_LT_B3_NULL_RISK",
+        "p_value": 3.0517578125e-05,
+        "reject": true
+      },
+      {
+        "holm_threshold": 0.05,
+        "hypothesis": "H2_R4_GT_B1_ALIAS_COVERAGE",
+        "p_value": 0.001953125,
+        "reject": true
+      }
+    ],
+    "holm_all_pass": true,
+    "label": "114_WORLDS_WITH_NO_TRANSPORT_MISSINGNESS",
+    "worlds": 114
+  },
+  "extreme_missingness_sensitivity": {
+    "H1": {
+      "adverse": 6,
+      "favorable": 15,
+      "p_value_one_sided": 0.03917694091796875
+    },
+    "H2_p_value_one_sided": 0.001953125,
+    "description": "All six transport-affected worlds are assigned as H1 discordances adverse to R4; H2 is unchanged because every affected world is NULL.",
+    "holm": [
+      {
+        "holm_threshold": 0.025,
+        "hypothesis": "H2_R4_GT_B1_ALIAS_COVERAGE",
+        "p_value": 0.001953125,
+        "reject": true
+      },
+      {
+        "holm_threshold": 0.05,
+        "hypothesis": "H1_R4_LT_B3_NULL_RISK",
+        "p_value": 0.03917694091796875,
+        "reject": true
+      }
+    ],
+    "holm_all_pass": true
+  },
+  "model_id": "qwen3.7-plus-2026-05-26",
+  "original_confirmatory_status_preserved": "FAIL_CLOSED_BEFORE_C",
+  "planned_sessions": 1920,
+  "transport_completion_rate": 0.9958333333333333,
+  "transport_missing_sessions": 8
+}

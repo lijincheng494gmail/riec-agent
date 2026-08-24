@@ -1,0 +1,42 @@
+PROPERTY_TEST_EXIT_CODE=0
+PROPERTY_TEST_STATUS=PASS
+
+STDOUT
+
+STDERR
+test_confirmation_used_for_selection_is_not_t3 (test_authority_properties.AuthorityPropertyTests.test_confirmation_used_for_selection_is_not_t3) ... ok
+test_contaminated_c_retains_independent_valid_q_only (test_authority_properties.AuthorityPropertyTests.test_contaminated_c_retains_independent_valid_q_only) ... ok
+test_core_fail_is_noncompensatory (test_authority_properties.AuthorityPropertyTests.test_core_fail_is_noncompensatory) ... ok
+test_development_only_is_exploratory (test_authority_properties.AuthorityPropertyTests.test_development_only_is_exploratory) ... ok
+test_exhaustive_core_and_identity_noncompensation (test_authority_properties.AuthorityPropertyTests.test_exhaustive_core_and_identity_noncompensation) ... ok
+test_identity_invalid_is_noncompensatory (test_authority_properties.AuthorityPropertyTests.test_identity_invalid_is_noncompensatory) ... ok
+test_incomplete_lineage_caps_at_exploratory (test_authority_properties.AuthorityPropertyTests.test_incomplete_lineage_caps_at_exploratory) ... ok
+test_invalid_missingness_is_not_t3 (test_authority_properties.AuthorityPropertyTests.test_invalid_missingness_is_not_t3) ... ok
+test_one_shot_authority_is_invariant_to_development_search_count (test_authority_properties.AuthorityPropertyTests.test_one_shot_authority_is_invariant_to_development_search_count) ... ok
+test_optional_stopping_without_controller_is_exploratory (test_authority_properties.AuthorityPropertyTests.test_optional_stopping_without_controller_is_exploratory) ... ok
+test_practical_threshold_is_required (test_authority_properties.AuthorityPropertyTests.test_practical_threshold_is_required) ... ok
+test_replication_requires_new_r_state (test_authority_properties.AuthorityPropertyTests.test_replication_requires_new_r_state) ... ok
+test_single_dimension_degradation_never_increases_authority (test_authority_properties.AuthorityPropertyTests.test_single_dimension_degradation_never_increases_authority) ... ok
+test_uncontrolled_multiple_final_claims_are_not_t3 (test_authority_properties.AuthorityPropertyTests.test_uncontrolled_multiple_final_claims_are_not_t3) ... ok
+test_valid_confirmation_is_t3 (test_authority_properties.AuthorityPropertyTests.test_valid_confirmation_is_t3) ... ok
+test_valid_qualification_is_t2 (test_authority_properties.AuthorityPropertyTests.test_valid_qualification_is_t2) ... ok
+test_agent_split_does_not_change_total_debit (test_state_ledger_multiplicity.LedgerTests.test_agent_split_does_not_change_total_debit) ... ok
+test_multiagent_queries_union_globally (test_state_ledger_multiplicity.LedgerTests.test_multiagent_queries_union_globally) ... ok
+test_new_evidence_identity_counts_once_each (test_state_ledger_multiplicity.LedgerTests.test_new_evidence_identity_counts_once_each) ... ok
+test_protected_information_requires_debit (test_state_ledger_multiplicity.LedgerTests.test_protected_information_requires_debit) ... ok
+test_same_evidence_across_agents_is_one_identity (test_state_ledger_multiplicity.LedgerTests.test_same_evidence_across_agents_is_one_identity) ... ok
+test_bonferroni_multiple_claims (test_state_ledger_multiplicity.MultiplicityTests.test_bonferroni_multiple_claims) ... ok
+test_bonferroni_single_claim_is_ordinary_alpha (test_state_ledger_multiplicity.MultiplicityTests.test_bonferroni_single_claim_is_ordinary_alpha) ... ok
+test_global_query_threshold_counts_all_agents (test_state_ledger_multiplicity.MultiplicityTests.test_global_query_threshold_counts_all_agents) ... ok
+test_holm_stepdown (test_state_ledger_multiplicity.MultiplicityTests.test_holm_stepdown) ... ok
+test_multiplicity_validation (test_state_ledger_multiplicity.MultiplicityTests.test_multiplicity_validation) ... ok
+test_confirmation_path (test_state_ledger_multiplicity.StateMachineTests.test_confirmation_path) ... ok
+test_contamination_is_terminal (test_state_ledger_multiplicity.StateMachineTests.test_contamination_is_terminal) ... ok
+test_no_return_to_sealed (test_state_ledger_multiplicity.StateMachineTests.test_no_return_to_sealed) ... ok
+test_partial_release_cannot_be_retried (test_state_ledger_multiplicity.StateMachineTests.test_partial_release_cannot_be_retried) ... ok
+test_qualification_path (test_state_ledger_multiplicity.StateMachineTests.test_qualification_path) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.001s
+
+OK

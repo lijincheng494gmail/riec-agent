@@ -1,0 +1,17 @@
+UNIT_TEST_EXIT_CODE=0
+UNIT_TEST_STATUS=PASS
+
+STDOUT
+
+STDERR
+test_all_required_regimes_exist (test_microbench_engine.MicrobenchEngineTests.test_all_required_regimes_exist) ... ok
+test_baseline_confirms (test_microbench_engine.MicrobenchEngineTests.test_baseline_confirms) ... ok
+test_case_ids_are_unique (test_microbench_engine.MicrobenchEngineTests.test_case_ids_are_unique) ... ok
+test_compound_risk_fails_closed (test_microbench_engine.MicrobenchEngineTests.test_compound_risk_fails_closed) ... ok
+test_declared_mutants_are_implemented (test_microbench_engine.MicrobenchEngineTests.test_declared_mutants_are_implemented) ... ok
+test_high_search_one_shot_confirms (test_microbench_engine.MicrobenchEngineTests.test_high_search_one_shot_confirms) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

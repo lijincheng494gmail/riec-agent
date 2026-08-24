@@ -1,0 +1,9 @@
+check_id,description,observed,criterion,status
+AC-001,One-shot false-claim rate remains controlled across development budgets,0.05138,max <= 0.06,PASS
+AC-002,One-shot rate does not drift with development search budget,0.0028600000000000014,range <= 0.015,PASS
+AC-003,Hybrid exactly preserves the competent one-shot baseline in R0,1,equal false claims and true claims at every budget,PASS
+AC-004,Naive repeated holdout access exhibits large false-claim inflation,0.9444,q100-q1 >= 0.8,PASS
+AC-005,Global repeated-access and final-family controllers preserve null error,0.0509,max <= 0.06,PASS
+AC-006,Numerical-only validation admits structurally unsupported claims,0.23874,>= 0.15,PASS
+AC-007,Hybrid blocks structurally invalid claims,0.0,== 0.0,PASS
+AC-008,Structural gate does not reduce coverage for structurally valid claims in this oracle test,0.0,<= 0.0,PASS

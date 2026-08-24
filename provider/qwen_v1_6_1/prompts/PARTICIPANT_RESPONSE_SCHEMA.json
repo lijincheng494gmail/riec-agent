@@ -1,0 +1,17 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ranked_candidate_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "ranked_candidate_ids"
+  ],
+  "type": "object"
+}

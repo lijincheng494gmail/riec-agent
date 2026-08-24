@@ -1,0 +1,8 @@
+{
+  "calibration_seed_sha256": "86717b4495c65d791bca8a2759421b342333a4f60fed5cd919f3e96ed513ae37",
+  "created_before_calibration": true,
+  "disjoint_seed_values": true,
+  "targeted_seed_sha256": "ac0e9705ed2446045e07bf495cb13aa7ca47f26981836d4fb0853ddbcabf298a",
+  "validation_not_used_for_parameter_selection": true,
+  "validation_seed_sha256": "f28f35b0fb9788961f8148599eb9a7b6391c6a100bb47fb8d9d5e84f15bf9918"
+}

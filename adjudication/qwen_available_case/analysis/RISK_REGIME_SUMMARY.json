@@ -1,0 +1,218 @@
+[
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 8,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N0_FIXED_CONTROL",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 8,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N0_FIXED_CONTROL",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 3,
+    "rate": 0.1875,
+    "risk_regime": "N1_MULTI_CLAIM",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N1_MULTI_CLAIM",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 6,
+    "rate": 0.375,
+    "risk_regime": "N2_ALIAS_LAUNDERING",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 2,
+    "rate": 0.125,
+    "risk_regime": "N2_ALIAS_LAUNDERING",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 4,
+    "rate": 0.25,
+    "risk_regime": "N3_DEPENDENT_ALIAS",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N3_DEPENDENT_ALIAS",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 3,
+    "rate": 0.1875,
+    "risk_regime": "N4_INVALID_HIGH_SCORE_LURE",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N4_INVALID_HIGH_SCORE_LURE",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B3_LOCAL_IDENTITY_BONFERRONI",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 2,
+    "rate": 0.125,
+    "risk_regime": "N5_COMBINED_RELAY",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 16,
+    "endpoint": "unsupported",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "N5_COMBINED_RELAY",
+    "truth_class": "NULL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 8,
+    "endpoint": "covered",
+    "numerator": 5,
+    "rate": 0.625,
+    "risk_regime": "S0_FIXED_CONTROL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 8,
+    "endpoint": "covered",
+    "numerator": 5,
+    "rate": 0.625,
+    "risk_regime": "S0_FIXED_CONTROL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S1_ALIAS_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 4,
+    "rate": 0.8,
+    "risk_regime": "S1_ALIAS_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S2_DEPENDENT_ALIAS_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 3,
+    "rate": 0.6,
+    "risk_regime": "S2_DEPENDENT_ALIAS_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S3_INVALID_LURE_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S3_INVALID_LURE_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 4,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S4_WEAK_LATE_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 4,
+    "endpoint": "covered",
+    "numerator": 2,
+    "rate": 0.5,
+    "risk_regime": "S4_WEAK_LATE_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "B1_GLOBAL_RAW_BONFERRONI",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S5_COMBINED_RELAY_SIGNAL",
+    "truth_class": "SIGNAL"
+  },
+  {
+    "arm": "R4_PERSISTENT_RIEC_BROKER",
+    "denominator": 5,
+    "endpoint": "covered",
+    "numerator": 0,
+    "rate": 0.0,
+    "risk_regime": "S5_COMBINED_RELAY_SIGNAL",
+    "truth_class": "SIGNAL"
+  }
+]

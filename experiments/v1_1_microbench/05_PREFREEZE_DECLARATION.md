@@ -1,0 +1,12 @@
+# Targeted microbenchmark prefreeze declaration
+
+- `STATUS=TARGETED_CASES_AND_MUTANTS_PREFROZEN`
+- `RULE_DESIGN_LEDGER_SHA256=7de7c487082a4d17d392999c6cf31e55129994b84af9c74b45c29bdc14e3d9a3`
+- `EXECUTABLE_VALIDATION_LEDGER_SHA256=b5930b02f512bf1577b6ea47051b71c520bf49626f01cdb534a9814590aed694`
+- `PREFREEZE_FILES=10`
+- `PREFREEZE_MANIFEST_SHA256=d221e003cda3156f5d9ad4695ebb77fbbbdecab34fdec18a909a2bc8e63a27b0`
+- `FORMAL_MICROBENCH_RUNS_ALLOWED=1`
+- `MODEL_API_CALLS_ALLOWED=0`
+- `OLD_LOCKBOX_ACCESS_ALLOWED=NO`
+
+Any case, expectation, adjudication rule, mutant or acceptance-rule change requires a new microbenchmark version.

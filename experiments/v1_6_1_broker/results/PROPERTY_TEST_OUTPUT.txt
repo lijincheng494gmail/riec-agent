@@ -1,0 +1,12 @@
+test_aliases_share_authority (test_v161_simulator.V161Tests.test_aliases_share_authority) ... ok
+test_broker_alpha_invariant (test_v161_simulator.V161Tests.test_broker_alpha_invariant) ... ok
+test_cp_upper_sanity (test_v161_simulator.V161Tests.test_cp_upper_sanity) ... ok
+test_fixed_control_b3_and_r4_same_threshold (test_v161_simulator.V161Tests.test_fixed_control_b3_and_r4_same_threshold) ... ok
+test_invalid_lure_is_never_queried (test_v161_simulator.V161Tests.test_invalid_lure_is_never_queried) ... ok
+test_null_generator_is_deterministic (test_v161_simulator.V161Tests.test_null_generator_is_deterministic) ... ok
+test_online_weights_sum_to_one (test_v161_simulator.V161Tests.test_online_weights_sum_to_one) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.010s
+
+OK

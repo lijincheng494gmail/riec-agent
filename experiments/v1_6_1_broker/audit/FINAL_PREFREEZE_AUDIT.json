@@ -1,0 +1,32 @@
+{
+  "calibration_worlds": 216000,
+  "core_v1_modified": false,
+  "deepseek_called": false,
+  "execution_repairs": [
+    {
+      "attempt1_preserved": true,
+      "repair": "secret_scanner_self_match_removed",
+      "scientific_change": false,
+      "scientific_outputs_rerun": false
+    }
+  ],
+  "external_provider_calls": 0,
+  "failed_v160_preserved": true,
+  "final_qwen_execution_authorized": false,
+  "final_qwen_protocol_frozen": true,
+  "finalized_utc": "2026-08-16T12:14:32.123227+00:00",
+  "finished_utc": "2026-08-16T12:13:38.431302+00:00",
+  "gpt_called": false,
+  "historical_integrity": "PASS",
+  "historical_packages_verified": 6,
+  "independent_validation": "PASS",
+  "independent_validation_worlds": 36000,
+  "property_tests": "PASS",
+  "protocol_id": "RIEC_AGENT_V1_6_1_PERSISTENT_BROKER_CALIBRATION",
+  "qwen_called": false,
+  "selected_broker_alpha": 0.05,
+  "started_utc": "2026-08-16T12:13:23.202860+00:00",
+  "status": "PASS",
+  "targeted_microbenchmark_worlds": 12000,
+  "targeted_risk_activation": "PASS"
+}

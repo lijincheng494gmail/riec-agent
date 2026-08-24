@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying RIEC-Agent manuscript or preprint when using this package."
+title: "RIEC-Agent: local evidential compliance under adaptive multi-agent search"
+type: software
+authors:
+  - family-names: Li
+    given-names: Jincheng
+version: 1.0.0
+date-released: 2026-08-17
+repository-code: "https://github.com/lijincheng494gmail/riec-agent"
+keywords:
+  - multi-agent systems
+  - adaptive search
+  - multiple testing
+  - evidence accounting
+  - AI for science

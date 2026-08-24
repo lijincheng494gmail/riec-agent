@@ -1,0 +1,178 @@
+[
+  {
+    "aliases": false,
+    "claims": 1,
+    "invalid_lure": false,
+    "regime_id": "N0_FIXED_CONTROL",
+    "rho": 0.0,
+    "risk_tags": [
+      "fixed",
+      "single_claim"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": false,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "N1_MULTI_CLAIM",
+    "rho": 0.0,
+    "risk_tags": [
+      "multi_claim",
+      "cross_agent"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "N2_ALIAS_LAUNDERING",
+    "rho": 0.0,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "cross_agent"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "N3_DEPENDENT_ALIAS",
+    "rho": 0.65,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "dependence",
+      "cross_agent"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": true,
+    "regime_id": "N4_INVALID_HIGH_SCORE_LURE",
+    "rho": 0.25,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "structural_gate",
+      "cross_agent"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": true,
+    "regime_id": "N5_COMBINED_RELAY",
+    "rho": 0.7,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "dependence",
+      "structural_gate",
+      "relay"
+    ],
+    "signal_shape": null,
+    "truth_class": "NULL"
+  },
+  {
+    "aliases": false,
+    "claims": 1,
+    "invalid_lure": false,
+    "regime_id": "S0_FIXED_CONTROL",
+    "rho": 0.0,
+    "risk_tags": [
+      "fixed",
+      "single_claim",
+      "signal"
+    ],
+    "signal_shape": 0.05,
+    "truth_class": "SIGNAL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "S1_ALIAS_SIGNAL",
+    "rho": 0.0,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "late_signal"
+    ],
+    "signal_shape": 0.05,
+    "truth_class": "SIGNAL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "S2_DEPENDENT_ALIAS_SIGNAL",
+    "rho": 0.65,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "dependence",
+      "late_signal"
+    ],
+    "signal_shape": 0.05,
+    "truth_class": "SIGNAL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": true,
+    "regime_id": "S3_INVALID_LURE_SIGNAL",
+    "rho": 0.25,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "structural_gate",
+      "late_signal"
+    ],
+    "signal_shape": 0.06,
+    "truth_class": "SIGNAL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": false,
+    "regime_id": "S4_WEAK_LATE_SIGNAL",
+    "rho": 0.35,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "weak_signal",
+      "late_signal"
+    ],
+    "signal_shape": 0.12,
+    "truth_class": "SIGNAL"
+  },
+  {
+    "aliases": true,
+    "claims": 4,
+    "invalid_lure": true,
+    "regime_id": "S5_COMBINED_RELAY_SIGNAL",
+    "rho": 0.7,
+    "risk_tags": [
+      "multi_claim",
+      "alias",
+      "dependence",
+      "structural_gate",
+      "relay",
+      "late_signal"
+    ],
+    "signal_shape": 0.06,
+    "truth_class": "SIGNAL"
+  }
+]
