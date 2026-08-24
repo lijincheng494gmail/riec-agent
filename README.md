@@ -2,6 +2,8 @@
 
 Executable research package for a local-to-global failure of evidential control under adaptive multi-agent search.
 
+Public preprint: [RIEC-Agent: Local Evidential Compliance Does Not Compose Under Adaptive Multi-Agent Search](https://doi.org/10.2139/ssrn.7298738).
+
 The central question is compositional: **if every agent satisfies its own local evaluation rule, does the population necessarily preserve system-level evidential validity?** In the tested synthetic evidence market, the answer was no. Agents could reuse finite shared evidence across claims, aliases and rounds while remaining locally compliant, causing multiplicity to accumulate outside each local ledger.
 
 ## Main result
